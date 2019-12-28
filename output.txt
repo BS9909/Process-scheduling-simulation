@@ -1,0 +1,24 @@
+--------------------------------
+FCFS:
+Average of averages in waiting time: 516
+Average of averages in proessing time: 527
+--------------------------------
+LCFS:
+Average of averages in waiting time: 520
+Average of averages in proessing time: 531
+--------------------------------
+SJF:
+Average of averages in waiting time: 353
+Average of averages in proessing time: 364
+--------------------------------
+Round Robin with quantum = 0.5:
+Average of averages in waiting time: 695.2946000000002
+Average of averages in proessing time: 705.7811000000002
+--------------------------------
+Round Robin with quantum = 1:
+Average of averages in waiting time: 682.2134
+Average of averages in proessing time: 692.6999000000002
+--------------------------------
+Round Robin with quantum = 1.5:
+Average of averages in waiting time: 694.0434499999997
+Average of averages in proessing time: 704.5299500000001
