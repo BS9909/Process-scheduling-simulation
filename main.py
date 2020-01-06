@@ -71,13 +71,28 @@ def getSJF():
     saveFile('output.txt', fw, fp,"SJF")
     return 
 
-def getRoundRobin():
+def getRoundRobinFCFS():
     #RoundRobin
     q=[0.5,1,1.5]
     getData('input.txt')
     roundRobin = RoundRobin(arr,wt,pt)
     for  i in range(0,len(q)):
-        rrString="Round Robin with quantum = " + str(q[i])
+        rrString="Round Robin FCFS with quantum = " + str(q[i])
+        roundRobin.waitingTime(q[i])
+        fw=roundRobin.averageWaiting()
+        roundRobin.processingTime()
+        fp=roundRobin.averageProcessing()
+        saveFile('output.txt', fw, fp,rrString)
+    return 
+
+def getRoundRobinLCFS():
+    #RoundRobin
+    q=[0.5,1,1.5]
+    getData('input.txt')
+    revArr=np.fliplr(arr)
+    roundRobin = RoundRobin(revArr,wt,pt)
+    for  i in range(0,len(q)):
+        rrString="Round Robin LCFS with quantum = " + str(q[i])
         roundRobin.waitingTime(q[i])
         fw=roundRobin.averageWaiting()
         roundRobin.processingTime()
@@ -88,4 +103,5 @@ def getRoundRobin():
 getFCFS()
 getLCFS()
 getSJF()
-getRoundRobin()
+getRoundRobinFCFS()
+getRoundRobinLCFS()
