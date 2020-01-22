@@ -1,36 +1,36 @@
 --------------------------------
 FCFS:
-Average of averages in waiting time: 521
-Average of averages in proessing time: 532
+Average of averages in waiting time: 524.0
+Average of averages in proessing time: 535.0
 --------------------------------
 LCFS:
-Average of averages in waiting time: 523
-Average of averages in proessing time: 533
+Average of averages in waiting time: 529.0
+Average of averages in proessing time: 540.0
 --------------------------------
 SJF:
-Average of averages in waiting time: 357
-Average of averages in proessing time: 367
+Average of averages in waiting time: 363.0
+Average of averages in proessing time: 374.0
 --------------------------------
 Round Robin FCFS with quantum = 0.5:
-Average of averages in waiting time: 702.34715
-Average of averages in proessing time: 712.91405
+Average of averages in waiting time: 714.66
+Average of averages in proessing time: 725.32
 --------------------------------
 Round Robin FCFS with quantum = 1:
-Average of averages in waiting time: 689.3218999999999
-Average of averages in proessing time: 699.8888000000002
+Average of averages in waiting time: 701.54
+Average of averages in proessing time: 712.2
 --------------------------------
 Round Robin FCFS with quantum = 1.5:
-Average of averages in waiting time: 701.3121999999998
-Average of averages in proessing time: 711.8791
+Average of averages in waiting time: 713.34
+Average of averages in proessing time: 724.0
 --------------------------------
 Round Robin LCFS with quantum = 0.5:
-Average of averages in waiting time: 702.4126999999999
-Average of averages in proessing time: 712.9795999999998
+Average of averages in waiting time: 714.91
+Average of averages in proessing time: 725.57
 --------------------------------
 Round Robin LCFS with quantum = 1:
-Average of averages in waiting time: 689.4529999999999
-Average of averages in proessing time: 700.0199
+Average of averages in waiting time: 702.04
+Average of averages in proessing time: 712.69
 --------------------------------
 Round Robin LCFS with quantum = 1.5:
-Average of averages in waiting time: 701.5214500000001
-Average of averages in proessing time: 712.0883500000001
+Average of averages in waiting time: 714.1
+Average of averages in proessing time: 724.75

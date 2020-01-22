@@ -2,13 +2,26 @@ import numpy as np
 from Averages import *
 
 class FCFS:
+    '''
+        Klasa odpoweidzialna za policzenie czasu oczekiwania (metoda waitingTime) i czasu przetwarzania
+        (metoda processing time) dla algorytmu FCFS
+    ''' 
     def __init__(self,arr,wt,pt):
-        #print("FCFS object created")
+        '''
+        Konstruktor klasy przyjmuje 4 argumenty, odpowiednio: self ktory zwraca instancje klasy na rzecz ktorej wywolywany jest dana metoda, arr 
+        czyli zmienna ktora jest tablica przechowujaca czasy jakie procesy potrzebuja od procesora na wykonanie sie, wt czyli znowu dwuwymiaorwa tablica numpy
+        przechowujaca czasy oczekiwania procecso, pt czyli tablica dwuwymiarowa numpy przechowujaca czasy przetwarzania procesow.
+        '''
         self.arr = arr
         self.wt=wt
         self.pt=pt
 
-    def waintingTime(self): #jest to czas oczekiwania dlatego ostatnie elemty wiersz musza byc uciete gdyz czas ich trwania nie wplywa na czas oczekiwania!!wiec range do 100 jest ok bo 100 nie jest zaliczane
+
+    def waitingTime(self): 
+        '''
+        Funkcja przyjmuje jeden argument ktory jest refeencja do instancji klasy na rzecz ktorej wywolywana jest metoda
+        Funkcja oblicza czas przetwarzania.
+         '''
         for i in range(0,100):
             self.wt[0,i]=0
         for i in range(0,100):
@@ -20,6 +33,10 @@ class FCFS:
         return 
 
     def processingTime(self):
+        '''
+        Funkcja przyjmuje jeden argument ktory jest refeencja do instancji klasy na rzecz ktorej wywolywana jest metoda
+        Funkcja oblicza czas przetwarzania.
+         '''
         for i in range(0,100):
             for j in range(0,100):
                 a=self.arr[i,j]
@@ -29,9 +46,19 @@ class FCFS:
         return 
         
     def averageProcessing(self):
-      averages = Averages(self.arr,self.wt,self.pt)  
-      return averages.processingAverage()
+        '''
+        Funkcja przyjmuje jeden argument ktory jest refeencja do instancji klasy na rzecz ktorej wywolywana jest metoda
+        Funkcja oblicza usredniony czas srednich czasow oczekiwania, wykorzystywany jest do tego obiekt klacy Averages
+        Funkcja zwraca usredniony czas srednich czasu przetwarzaia
+        '''        
+        averages = Averages(self.arr,self.wt,self.pt)  
+        return averages.processingAverage()
 
     def averageWaiting(self):
+        '''
+        Funkcja przyjmuje jeden argument ktory jest refeencja do instancji klasy na rzecz ktorej wywolywana jest metoda
+        Funkcja oblicza usredniony czas srednich czasow oczekiwania, wykorzystywany jest do tego obiekt klacy Averages
+        Funkcja zwraca usredniony czas srednich czasu oczewkiania
+        '''       
         averages = Averages(self.arr,self.wt,self.pt)  
         return averages.waitingAverage()
